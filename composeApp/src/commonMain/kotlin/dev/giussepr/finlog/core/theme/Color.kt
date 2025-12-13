@@ -1,4 +1,4 @@
-package dev.giussepr.finlog.theme
+package dev.giussepr.finlog.core.theme
 import androidx.compose.ui.graphics.Color
 
 val primaryLight = Color(0xFF28638A)

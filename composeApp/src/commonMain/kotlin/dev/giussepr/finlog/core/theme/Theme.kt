@@ -1,4 +1,4 @@
-package dev.giussepr.finlog.theme
+package dev.giussepr.finlog.core.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

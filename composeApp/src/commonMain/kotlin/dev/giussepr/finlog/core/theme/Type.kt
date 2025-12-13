@@ -1,4 +1,4 @@
-package dev.giussepr.finlog.theme
+package dev.giussepr.finlog.core.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
