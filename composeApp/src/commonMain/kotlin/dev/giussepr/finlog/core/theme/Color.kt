@@ -72,3 +72,17 @@ val surfaceContainerLowDark = Color(0xFF181C20)
 val surfaceContainerDark = Color(0xFF1C2024)
 val surfaceContainerHighDark = Color(0xFF262A2E)
 val surfaceContainerHighestDark = Color(0xFF313539)
+
+// Custom colors
+val green = Color(0xFF2ECC71)
+val red = Color(0xFFE74C3C)
+
+data class ExtendedColors(
+    val income: Color,
+    val expense: Color
+)
+
+val DefaultExtendedColors = ExtendedColors(
+    income = green,
+    expense = red
+)

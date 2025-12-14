@@ -1,11 +1,10 @@
 package dev.giussepr.finlog.core.presentation
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import dev.giussepr.finlog.home.HomeScreen
+import dev.giussepr.finlog.home.presentation.HomeScreen
 
 @Composable
 fun NavigationRoot() {

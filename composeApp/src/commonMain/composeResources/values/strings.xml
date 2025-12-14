@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="balance">Balance</string>
+    <string name="income">Income</string>
+    <string name="expenses">Expenses</string>
+    <string name="balance_overview">Balance Overview</string>
+    <string name="last_6_months">Last 6 Months</string>
+    <string name="last_transactions">Last Transactions</string>
+    <string name="view_all">View All</string>
+</resources>
