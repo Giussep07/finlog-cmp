@@ -29,10 +29,7 @@ import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.surfaceColorAtElevation
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -48,12 +45,10 @@ import finlog.composeapp.generated.resources.Res
 import finlog.composeapp.generated.resources.balance
 import finlog.composeapp.generated.resources.balance_overview
 import finlog.composeapp.generated.resources.expenses
-import finlog.composeapp.generated.resources.ic_logo_white
 import finlog.composeapp.generated.resources.income
 import finlog.composeapp.generated.resources.last_6_months
 import finlog.composeapp.generated.resources.last_transactions
 import finlog.composeapp.generated.resources.view_all
-import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -64,49 +59,12 @@ fun HomeScreen() {
 
 @Composable
 fun HomeContent() {
-    Scaffold(
+    Column(
         modifier = Modifier
-            .fillMaxSize(),
-        containerColor = MaterialTheme.colorScheme.background,
-        topBar = {
-            TopAppBar(
-                navigationIcon = {
-                    Box(
-                        modifier = Modifier
-                            .padding(start = 8.dp)
-                            .size(36.dp)
-                            .background(MaterialTheme.colorScheme.primary, shape = CircleShape),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Icon(
-                            painter = painterResource(Res.drawable.ic_logo_white),
-                            contentDescription = null,
-                            tint = MaterialTheme.colorScheme.onPrimary
-                        )
-                    }
-                },
-                title = {
-                    Text(
-                        modifier = Modifier
-                            .padding(start = 4.dp),
-                        text = "Finlog",
-                        color = MaterialTheme.colorScheme.onBackground
-                    )
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.background,
-                    titleContentColor = MaterialTheme.colorScheme.onBackground
-                )
-            )
-        },
-    ) { innerPadding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(innerPadding)
-                .padding(horizontal = 16.dp)
-                .verticalScroll(rememberScrollState())
-        ) {
+            .fillMaxSize()
+            .padding(horizontal = 16.dp)
+            .verticalScroll(rememberScrollState())
+    ) {
             BalanceCard()
             // Income Card
             BalanceIconCard(
@@ -144,7 +102,6 @@ fun HomeContent() {
 
             LastTransactionsCard()
         }
-    }
 }
 
 @Composable
